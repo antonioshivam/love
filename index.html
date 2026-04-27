@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A soft cinematic love-letter surprise for Drishti."
+    />
+    <title>For Drishti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./effects.css" />
+    <link rel="stylesheet" href="./hearts.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+  </head>
+  <body>
+    <main id="app" class="love-stage" aria-label="Romantic surprise website">
+      <section id="hero" class="hero-section" aria-live="polite">
+        <div
+          id="effects-layer"
+          class="effects-layer"
+          aria-hidden="true"
+        >
+          <div class="ambient-orb ambient-orb--rose"></div>
+          <div class="ambient-orb ambient-orb--lavender"></div>
+          <div class="ambient-orb ambient-orb--cream"></div>
+          <div class="letter-veil"></div>
+          <div class="luxury-frame"></div>
+          <div class="silk-ribbon silk-ribbon--one"></div>
+          <div class="silk-ribbon silk-ribbon--two"></div>
+          <div class="bokeh-cluster bokeh-cluster--left"></div>
+          <div class="bokeh-cluster bokeh-cluster--right"></div>
+          <div id="particle-layer" class="particle-layer"></div>
+          <div id="note-layer" class="note-layer"></div>
+          <div id="flirty-layer" class="flirty-layer"></div>
+          <div id="petal-layer" class="petal-layer"></div>
+          <div id="sparkle-layer" class="sparkle-layer"></div>
+          <div id="ripple-layer" class="ripple-layer"></div>
+          <div class="center-halo"></div>
+        </div>
+
+        <div id="heart-system" class="heart-system" aria-hidden="true"></div>
+
+        <div class="intro-content">
+          <p class="prelude-text">a little moment, just for</p>
+          <p class="subtle-name">drishti</p>
+          <button
+            id="surprise-button"
+            class="surprise-button"
+            type="button"
+            aria-label="Open the surprise"
+          >
+            <span class="gift-icon" aria-hidden="true">&#127873;</span>
+            <span>Surprise</span>
+          </button>
+        </div>
+
+        <section id="love-message" class="love-message" aria-hidden="true">
+          <div class="message-orbit" aria-hidden="true">
+            <span style="--i: 0">stay close</span>
+            <span style="--i: 1">xoxo</span>
+            <span style="--i: 2">be mine?</span>
+            <span style="--i: 3">only you</span>
+          </div>
+          <p class="message-dedication">drishti</p>
+          <h1 id="main-love-text" class="main-love-text"></h1>
+          <p id="flirty-line" class="flirty-line"></p>
+          <p id="second-line" class="second-line">
+            Every moment with you feels like magic.
+          </p>
+          <p class="handwritten-echo">I love you</p>
+        </section>
+
+        <button
+          id="audio-toggle"
+          class="audio-toggle"
+          type="button"
+          aria-label="Toggle soft background music"
+          aria-pressed="false"
+          hidden
+        >
+          <span class="audio-dot" aria-hidden="true"></span>
+          <span class="audio-label">sound on</span>
+        </button>
+
+        <div class="soft-vignette" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <noscript>
+      <div class="noscript-message">
+        This surprise needs JavaScript to bloom.
+      </div>
+    </noscript>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
