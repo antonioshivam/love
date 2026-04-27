@@ -1,0 +1,63 @@
+.heart-system {
+  z-index: 3;
+}
+
+.heart-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart-layer--back {
+  z-index: 1;
+  filter: blur(0.25px);
+}
+
+.heart-layer--front {
+  z-index: 3;
+}
+
+.floating-heart {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--size);
+  height: var(--size);
+  color: var(--heart-color);
+  opacity: 0;
+  transform: translate3d(-10rem, 100vh, 0);
+  will-change: transform, opacity;
+}
+
+.floating-heart svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  filter:
+    drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.25))
+    drop-shadow(0 0.6rem 1rem rgba(116, 32, 64, 0.16));
+}
+
+.floating-heart.is-back svg {
+  filter:
+    drop-shadow(0 0 0.35rem rgba(255, 255, 255, 0.14))
+    drop-shadow(0 0.35rem 0.8rem rgba(116, 32, 64, 0.1));
+}
+
+.heart-glimmer {
+  position: absolute;
+  inset: 18% 30% auto auto;
+  width: 16%;
+  height: 16%;
+  background: rgba(255, 255, 255, 0.66);
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-heart {
+    display: none;
+  }
+}
